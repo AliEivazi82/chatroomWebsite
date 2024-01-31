@@ -1,6 +1,203 @@
 
+@font-face {
+    font-family: "IranSans";
+    src: url(../fonts/IRANSansWeb.ttf),url(../fonts/IRANSansWeb.woff);
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "IranSans";
+}
+
+a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+aside#sidebar {
+    position: fixed;
+    right: 0px;
+    left: auto;
+    top: 0;
+    bottom: 0;
+    background-color: #151821;
+    width: 250px;
+}
+
+#sidebar-main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sidebar-main_profile {
+    width: 100%;
+    height: 18vh;
+    overflow-y: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-BGP {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+    opacity: 0.5;
+}
+
+.profile-pic {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border: 2px solid #151821;
+    box-shadow: 0 0 20px #151821;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    border: 2px solid #f5f8ff;
+    box-shadow: 0 0 20px #f5f8ff;
+    cursor: pointer;
+}
+
+.sidebar-main_links {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+.sidebar-main_links p {
+    color: #b0b1b4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+}
+
+.sidebar-main_links p:hover {
+    color: #f5f8ff;
+}
+
+.main-links_accountsDropDown {
+    padding: 10px 0;
+}
+
+.main-links_accountsDropDown p {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#account-dropDown {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    transition: 0.3s all ease-in-out;
+    overflow-y: hidden;
+    flex-direction: column;
+    gap: 3px;
+    display: none;
+}
+
+#account-dropDown a {
+    color: #b0b1b4;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#account-dropDown a:hover {
+    color: #f5f8ff;
+}
+
+#account-dropDown a img {
+    background-color: #b0b1b4;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+#account-dropDown a:hover img {
+    background-color: #99aeea;
+}
+
+.drop_open {
+    display: flex !important;
+}
+
+.main-links_accountsDropDown p svg {
+    transition: 0.15s all ease-in-out;
+}
+
+.droped {
+    color: #f5f8ff !important;
+}
+
+.droped svg {
+    transform:  rotateX(180deg) !important;
+}
+
+.add-account_link {
+    padding: 0 10px !important;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #f5f8ff !important;
+}
+
+.add-account_link:hover {
+    background-color: #ffffff32;
+}
+
+.add-account_link img {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    width: 25px !important;
+}
+
+.sidebar-main_links .main-links {
+    width: 100%;
+    border-top: 1px solid #ffffff32;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-main_links .main-links a {
+    color: #f5f8ff;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px 10px;
+    gap: 15px;
+}
+
+.sidebar-main_links .main-links a:hover {
+    background-color: #ffffff32;
+}
+
+.sidebar-main_links .main-links a img {
+    width: 20px;
+}
+
+.Cinfo {
+    font-size: 12px;
+    color: #b0b1b4;
 }
